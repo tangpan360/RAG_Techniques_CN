@@ -4,6 +4,23 @@
 
 ---
 
+### CN 教程生成与学习原则（后续统一按此执行）
+
+我们会严格参考上游仓库的学习节奏，并在中文仓库中维护一套“可直接运行、中文化、跟随 LangChain 官方文档写法”的 notebooks。
+
+- **上游节奏来源**：先看 `references/RAG_Techniques/README.md` 的 technique 表与目录结构，按其顺序确定“本次要学的目标 notebook”。
+- **目标文件选择**：每次只锁定我们需要学习的上游 notebook（例如 `references/RAG_Techniques/all_rag_techniques/<name>.ipynb`），学习与改写都围绕它展开。
+- **先查 LangChain 官方文档再写代码**：在生成/更新 CN 版 notebook 前，先通过 “Docs by LangChain” 的 MCP 查询当前推荐用法（导入路径、类名、方法名、参数），CN 版写法以此为准。
+- **CN 版文件命名约定**：在中文仓库创建同名加后缀的 notebook，例如：
+  - 上游：`references/RAG_Techniques/all_rag_techniques/<name>.ipynb`
+  - 中文：`references/RAG_Techniques_CN/all_rag_techniques/<name>_cn.ipynb`
+- **结构与核心逻辑保持一致，但不强求 1:1**：如果上游 notebook 依赖旧行为/旧 API，允许在 CN 版中调整实现逻辑以适配当前文档写法与运行环境，只要“教学结构与关键步骤”一致即可。
+- **文档要干净**：CN notebook 只保留正常教程需要的标题、必要解释与可直接运行的代码；不写任何“对照参考 / 从哪复制 / 为什么不下载 / 数据从哪来”等说明。
+- **功能覆盖原版**：CN 版应覆盖上游 notebook 的关键功能点（构建、检索、展示/检查、评估等）。如上游评估脚本不完善或与当前版本不兼容，可在 `references/RAG_Techniques_CN/` 下维护可运行的等价实现。
+- **依赖事实来源**：依赖版本以 `references/RAG_Techniques_CN/requirements.txt` 为准（不要求在 notebook 首格打印版本信息）。
+
+---
+
 ### 你将获得什么
 
 - **一套可复用的 RAG 最小模板**：文档 → 切分 → 向量索引 → 检索 → 生成 →（可选）引用证据
