@@ -31,6 +31,9 @@ deepeval==4.0.6
 sentence-transformers==5.6.0
 jrag==0.0.1
 
+# HyPE notebook dependencies (pinned to currently installed versions)
+tqdm==4.68.2
+
 # Notebook UX (optional, pinned to currently installed versions)
 ipywidgets==8.1.8
 jupyterlab-widgets==3.0.16
