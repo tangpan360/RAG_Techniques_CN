@@ -37,3 +37,5 @@ tqdm==4.68.2
 # Notebook UX (optional, pinned to currently installed versions)
 ipywidgets==8.1.8
 jupyterlab-widgets==3.0.16
+
+matplotlib==3.11.0
