@@ -42,3 +42,4 @@ jupyterlab-widgets==3.0.16
 matplotlib==3.11.0
 
 grouse==0.4.2
+graphrag==3.1.0
