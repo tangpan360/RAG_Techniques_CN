@@ -20,6 +20,8 @@ python-dotenv==1.2.2
 pydantic==2.13.4
 requests==2.34.2
 numpy==2.4.6
+pandas==2.3.3
+scikit-learn==1.7.2
 
 # Simple RAG notebook dependencies (pinned to currently installed versions)
 pypdf==6.13.2
