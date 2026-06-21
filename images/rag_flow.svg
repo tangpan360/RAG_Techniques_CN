@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="460" viewBox="0 0 1400 460">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif; fill: #111827; }
+      .title { font-size: 22px; font-weight: 700; }
+      .laneTitle { font-size: 16px; font-weight: 700; fill: #0F172A; }
+      .subtle { font-size: 12px; fill: #6B7280; }
+      .mid { dominant-baseline: middle; }
+      .nodeMain { font-size: 13px; font-weight: 700; }
+      .nodeSub { font-size: 11.5px; font-weight: 600; fill: #64748B; }
+      .lane { fill: #F8FAFC; stroke: #CBD5E1; stroke-width: 1.0; }
+      .box { fill: #EEF5FF; stroke: #93C5FD; stroke-width: 1.2; }
+      .boxOpt { fill: #F3F4F6; stroke: #CBD5E1; stroke-width: 1.2; }
+      .boxRet { fill: #ECFDF5; stroke: #34D399; stroke-width: 1.4; }
+      .arrow { stroke: #4B5563; stroke-width: 1.8; fill: none; marker-end: url(#arrowHead); }
+      .arrowDashed { stroke: #6B7280; stroke-width: 1.8; fill: none; stroke-dasharray: 6 6; marker-end: url(#arrowOpen); }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#4B5563"/>
+    </marker>
+    <marker id="arrowOpen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M1,1 L10,6 L1,11" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="700" y="40" text-anchor="middle" class="title">&#24120;&#35268; RAG &#27969;&#31243;&#65288;&#31163;&#32447;&#32034;&#24341; / &#22312;&#32447;&#26597;&#35810;&#65289;</text>
+
+  <!-- Lanes -->
+  <rect x="40" y="70" width="1320" height="190" rx="18" ry="18" class="lane"/>
+  <rect x="40" y="275" width="1320" height="160" rx="18" ry="18" class="lane"/>
+
+  <text x="70" y="105" class="laneTitle">&#31163;&#32447;&#32034;&#24341;&#65288;Indexing&#65289;</text>
+  <text x="70" y="302" class="laneTitle">&#22312;&#32447;&#26597;&#35810;&#65288;Retrieve &#8594; Generate&#65289;</text>
+
+  <!-- Offline nodes -->
+  <rect x="70" y="120" width="190" height="84" rx="14" ry="14" class="box" filter="url(#shadow)"/>
+  <text x="165" y="152" text-anchor="middle" class="nodeMain mid">&#9312; &#25968;&#25454;&#37319;&#38598;</text>
+  <text x="165" y="174" text-anchor="middle" class="nodeSub mid">PDF / &#32593;&#39029; / CSV / JSON / DB</text>
+
+  <rect x="318" y="120" width="230" height="84" rx="14" ry="14" class="box" filter="url(#shadow)"/>
+  <text x="433" y="146" text-anchor="middle" class="nodeMain mid">&#9313; &#25991;&#26723;&#35299;&#26512;</text>
+  <text x="433" y="166" text-anchor="middle" class="nodeSub mid">&#25277;&#21462; / &#28165;&#27905;</text>
+  <text x="433" y="184" text-anchor="middle" class="nodeSub mid">&#65288;&#34920;&#26684;/&#22270;&#29255;&#21487;&#36873;&#19987;&#29992;&#24037;&#20855;&#65289;</text>
+
+  <rect x="606" y="120" width="210" height="84" rx="14" ry="14" class="box" filter="url(#shadow)"/>
+  <text x="711" y="152" text-anchor="middle" class="nodeMain mid">&#9314; &#25991;&#26412;&#20999;&#22359;</text>
+  <text x="711" y="174" text-anchor="middle" class="nodeSub mid">&#22266;&#23450;&#38271;&#24230; / &#35821;&#20041; + overlap</text>
+
+  <rect x="874" y="120" width="170" height="84" rx="14" ry="14" class="box" filter="url(#shadow)"/>
+  <text x="959" y="152" text-anchor="middle" class="nodeMain mid">&#9315; &#21521;&#37327;&#21270;</text>
+  <text x="959" y="174" text-anchor="middle" class="nodeSub mid">Embedding</text>
+
+  <rect x="1102" y="120" width="230" height="84" rx="14" ry="14" class="box" filter="url(#shadow)"/>
+  <text x="1217" y="152" text-anchor="middle" class="nodeMain mid">&#9316; &#21521;&#37327;&#24211;</text>
+  <text x="1217" y="174" text-anchor="middle" class="nodeSub mid">FAISS / Milvus / Chroma &#8230;</text>
+
+  <!-- Offline arrows -->
+  <path d="M260 162 L318 162" class="arrow"/>
+  <path d="M548 162 L606 162" class="arrow"/>
+  <path d="M816 162 L874 162" class="arrow"/>
+  <path d="M1044 162 L1102 162" class="arrow"/>
+
+  <!-- Online nodes (single row, tighter lane padding) -->
+  <rect x="70" y="322" width="100" height="80" rx="14" ry="14" class="boxOpt" filter="url(#shadow)"/>
+  <text x="120" y="362" text-anchor="middle" class="nodeMain mid">&#9312; Query</text>
+
+  <rect x="191" y="322" width="150" height="80" rx="14" ry="14" class="boxOpt" filter="url(#shadow)"/>
+  <text x="266" y="344" text-anchor="middle" class="nodeMain mid">&#9313; Query &#25913;&#20889;/&#25193;&#23637;</text>
+  <text x="266" y="362" text-anchor="middle" class="nodeMain mid">&#65288;&#21487;&#36873;&#65289;</text>
+  <text x="266" y="380" text-anchor="middle" class="nodeSub mid">&#25193;&#23637; / &#32416;&#38169; / &#32479;&#19968;&#35821;&#35328;</text>
+
+  <rect x="362" y="322" width="170" height="80" rx="14" ry="14" class="boxRet" filter="url(#shadow)"/>
+  <text x="447" y="350" text-anchor="middle" class="nodeMain mid">&#9314; &#26816;&#32034;</text>
+  <text x="447" y="372" text-anchor="middle" class="nodeSub mid">&#21521;&#37327; top-k&#65288;+BM25 &#21487;&#36873;&#65289;</text>
+
+  <rect x="553" y="322" width="130" height="80" rx="14" ry="14" class="boxOpt" filter="url(#shadow)"/>
+  <text x="618" y="350" text-anchor="middle" class="nodeMain mid">&#9315; &#37325;&#25490;&#24207;&#65288;&#21487;&#36873;&#65289;</text>
+  <text x="618" y="372" text-anchor="middle" class="nodeSub mid">Reranker</text>
+
+  <rect x="704" y="322" width="180" height="80" rx="14" ry="14" class="boxOpt" filter="url(#shadow)"/>
+  <text x="794" y="348" text-anchor="middle" class="nodeMain mid">&#9316; &#19978;&#19979;&#25991;&#22686;&#24378;&#65288;&#21487;&#36873;&#65289;</text>
+  <text x="794" y="370" text-anchor="middle" class="nodeSub mid">&#21387;&#32553; / &#25193;&#31383; / header&#65288;&#21487;&#36873;&#65289;</text>
+
+  <rect x="905" y="322" width="140" height="80" rx="14" ry="14" class="box" filter="url(#shadow)"/>
+  <text x="975" y="362" text-anchor="middle" class="nodeMain mid">&#9317; Prompt &#32452;&#35013;</text>
+
+  <rect x="1066" y="322" width="105" height="80" rx="14" ry="14" class="box" filter="url(#shadow)"/>
+  <text x="1118.5" y="362" text-anchor="middle" class="nodeMain mid">&#9318; LLM &#29983;&#25104;</text>
+
+  <rect x="1192" y="322" width="135" height="80" rx="14" ry="14" class="boxOpt" filter="url(#shadow)"/>
+  <text x="1259.5" y="350" text-anchor="middle" class="nodeMain mid">&#9319; &#21518;&#22788;&#29702;&#65288;&#21487;&#36873;&#65289;</text>
+  <text x="1259.5" y="372" text-anchor="middle" class="nodeSub mid">&#26684;&#24335;&#21270;/&#24341;&#29992;</text>
+
+  <!-- Online arrows (single row) -->
+  <path d="M170 362 L191 362" class="arrow"/>
+  <path d="M341 362 L362 362" class="arrow"/>
+  <path d="M532 362 L553 362" class="arrow"/>
+  <path d="M683 362 L704 362" class="arrow"/>
+  <path d="M884 362 L905 362" class="arrow"/>
+  <path d="M1045 362 L1066 362" class="arrow"/>
+  <path d="M1171 362 L1192 362" class="arrow"/>
+
+  <!-- Dashed link from Vector Store to Retrieval -->
+  <path d="M1217 204 C1217 258, 700 258, 447 322" class="arrowDashed"/>
+  <rect x="820" y="236" width="120" height="26" fill="#FFFFFF" opacity="0.95" stroke="#E5E7EB" rx="8" ry="8"/>
+  <text x="880" y="249" text-anchor="middle" class="subtle mid">&#25552;&#20379;&#20505;&#36873;&#25991;&#26723;</text>
+</svg>
