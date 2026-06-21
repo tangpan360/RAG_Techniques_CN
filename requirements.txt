@@ -30,6 +30,11 @@ PyMuPDF==1.27.2.3
 rank-bm25==0.2.2
 deepeval==4.0.6
 
+# Multi-modal RAG (ColPali) notebook dependencies (pinned to currently installed versions)
+byaldi==0.0.7
+pillow==11.3.0
+transformers==5.12.1
+
 # JSON RAG notebook dependencies (pinned to currently installed versions)
 sentence-transformers==5.6.0
 jrag==0.0.1
